@@ -2,21 +2,29 @@ function getInputText(){
     return document.querySelector('.newTask').value.trim();
 }
 
+function addCheckbox(newTaskElement){
+    const newTaskCheck = document.createElement('input');
+    newTaskCheck.type = 'checkbox';
+
+    newTaskCheck.classList.add('newTaskInput');
+    newTaskElement.appendChild(newTaskCheck);
+}
+
+function addSpan(newTaskElement){
+    const textSpan = document.createElement('span');
+    textSpan.appendChild(document.createTextNode(getInputText()));
+    newTaskElement.appendChild(textSpan);
+}
+
 function addTask(){
     if(getInputText()){
         const newTaskElement = document.createElement('li');
-        const newTaskCheck = document.createElement('input');
-        newTaskCheck.type = 'checkbox';
-
-        newTaskCheck.classList.add('newTaskInput');
-        newTaskElement.appendChild(newTaskCheck);
-
-        const textSpan = document.createElement('span');
-        textSpan.appendChild(document.createTextNode(getInputText()));
-        newTaskElement.appendChild(textSpan);
+        
+        addCheckbox(newTaskElement);
+        addSpan(newTaskElement);
     
         document.querySelector('.task-list').appendChild(newTaskElement);
-        teste(newTaskElement);
+        toggleStrikethrough(newTaskElement);
     }
 }
 
@@ -26,7 +34,7 @@ function clearTask(){
     });
 }
 
-function teste(checkbox){
+function toggleStrikethrough(checkbox){
     checkbox.addEventListener('click', function() {
         const text = checkbox.querySelector('span');
         text.style.textDecoration = text.style.textDecoration === 'line-through' ? 'none' : 'line-through';
