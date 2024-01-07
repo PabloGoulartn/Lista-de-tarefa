@@ -17,8 +17,8 @@ body{
 }
 
 .container{
-    width: 700px;
-    height: 400px;
+    width: 500px;
+    height: 300px;
     background-color: white;
     border-radius: 12px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.315);
@@ -38,8 +38,39 @@ h1{
     color: #063251;
 }
 
+section{
+    width: 80%;
+}
+
+#formTask{
+    display: flex;
+}
+
+.newTask{
+    width: 75%;
+    height: 25px;
+    border: 1px solid #005fcc;
+    border-radius: 5px 0 0 5px;
+    padding-left: 5px;
+}
+
+.add-task-btn{
+    width: 95px;
+    height: 25px;
+    background-color: #a5d5f9;
+    border: none;
+    border-radius: 0 5px 5px 0px;
+}
+
 main{
     width: 80%;
+}
+
+span{
+    color: #063251;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-left: 5px;
 }
 
 .clear-tasks-btn{
@@ -47,6 +78,6 @@ main{
     background-color: white;
     color: #b9473c;
     font-weight: 700;
-    height: 100px;
+    height: 60px;
     cursor: pointer;
 }
