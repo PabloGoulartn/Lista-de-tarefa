@@ -11,17 +11,19 @@
     <div class="container">
         <h1>Sua lista de tarefas</h1>
 
+        <section>
+            <form id="formTask">
+                <input type="text" class="newTask" placeholder="Escreva uma nova tarefa..." required>
+                <button type="button" class="add-task-btn">Adicionar Tarefa</button>
+            </form>
+        </section>
+
         <main>
             <ul class="task-list">
             </ul>
         </main>
 
-        <section>
-            <form id="formTarefa">
-                <input type="text" class="newTask" placeholder="Escreva uma nova tarefa..." required>
-                <button type="button" class="add-task-btn">Adicionar Tarefa</button>
-            </form>
-        </section>
+        <button type="button" class="clear-btn">Apagar Tudo</button>
     </div>
 
     <script src="JS/index.js"></script>
