@@ -48,7 +48,7 @@ section{
 
 .newTask{
     width: 75%;
-    height: 25px;
+    height: 30px;
     border: 1px solid #005fcc;
     border-radius: 5px 0 0 5px;
     padding-left: 5px;
@@ -56,7 +56,7 @@ section{
 
 .add-task-btn{
     width: 95px;
-    height: 25px;
+    height: 30px;
     background-color: #a5d5f9;
     border: none;
     border-radius: 0 5px 5px 0px;
@@ -65,6 +65,10 @@ section{
 main{
     width: 80%;
     height: 550px;
+}
+
+li{
+    margin-bottom: 5px;
 }
 
 span{
@@ -80,5 +84,8 @@ span{
     color: #b9473c;
     font-weight: 700;
     height: 100px;
+}
+
+.btn{
     cursor: pointer;
 }

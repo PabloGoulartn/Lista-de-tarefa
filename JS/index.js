@@ -20,18 +20,20 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     
     function addTask(event){
-        if(getInputText() && counter < 36){
-            counter++;
-            const newTaskElement = document.createElement('li');
-    
-            addCheckbox(newTaskElement);
-            addSpan(newTaskElement);
+        if(getInputText()){
+            if(counter < 28){
+                counter++;
+                const newTaskElement = document.createElement('li');
         
-            document.querySelector('.task-list').appendChild(newTaskElement);
-            toggleStrikethrough(newTaskElement);
-        }
-        else{
-            alert('Limite de itens atingindo.');
+                addCheckbox(newTaskElement);
+                addSpan(newTaskElement);
+            
+                document.querySelector('.task-list').appendChild(newTaskElement);
+                toggleStrikethrough(newTaskElement);
+            }
+            else{
+                alert('Limite de itens atingindo.');
+            }
         }
     }
     
