@@ -1,26 +1,9 @@
-var input = document.createElement("input");
-
-function AddTask()
-{   
-    let main = document.querySelector("main");
-    var textInput = document.querySelector("input.type-text");
-
-    if(textInput.value)
-    {
-        var article = document.createElement("article");
-        main.appendChild(article);
-
-        input.type = "checkbox";
-        article.appendChild(input);
-
-        var p = document.createElement("p");
-        p.innerText = textInput.value;
-        article.appendChild(p);
+document.querySelector('.add-task-btn').addEventListener('click', function(){
+    const text = document.querySelector('.newTask').value.trim();
+    
+    if(text){
+        const newTaskElement = document.createElement('li');
+        newTaskElement.textContent = text;
+        document.querySelector('.task-list').appendChild(newTaskElement);
     }
-}
-/*
-input.onclick = function()
-{
-    var te = document.querySelector("p");
-    te.innerHTML = `<s>${te.value}</s>`;
-}*/
+});

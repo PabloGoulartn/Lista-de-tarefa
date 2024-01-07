@@ -12,11 +12,15 @@
         <h1>Sua lista de tarefas</h1>
 
         <main>
+            <ul class="task-list">
+            </ul>
         </main>
 
         <section>
-            <input type="text" class="type-text" placeholder="Escreva uma nova tarefa...">
-            <button class="btn" onclick="AddTask()">Adicionar</button>
+            <form id="formTarefa">
+                <input type="text" class="newTask" placeholder="Escreva uma nova tarefa..." required>
+                <button type="button" class="add-task-btn">Adicionar Tarefa</button>
+            </form>
         </section>
     </div>
 
