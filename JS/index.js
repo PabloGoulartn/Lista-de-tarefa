@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function addTask(event) {
         if (getInputText()) {
-            if (counter < 28) {
+            if (counter < 25) {
                 counter++;
                 const newTaskElement = document.createElement('li');
                 addCheckbox(newTaskElement);
